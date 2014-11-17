@@ -1,0 +1,52 @@
+{{template "common/head.html" .}}
+
+			<section id="fourth" class="container">
+				<header class="container text-center" style="margin:20px 0;" >
+					<h1>Welcome {{ .msg }}</h1>
+				</header>
+				
+				<div class="container ">
+					<form method="post" action="" role="form" class="form-horizontal"  >
+					{{ .xsrf }}
+					<div class="container site-form" >
+						<div class="form-group">
+							<label for="inputPassword3" class="col-sm-2 control-label">称呼</label>
+							<div class="col-sm-10">
+							  <input type="text" name="name" class="form-control" id="inputPassword3" placeholder="输入您的名称">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputPassword3" class="col-sm-2 control-label">性别</label>
+							<div class="col-sm-10">
+							  <label class="radio-inline">
+							  <input type="radio" name="sex" id="inlineRadio2" value="1" checked > 男
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="sex" id="inlineRadio3" value="0"> 女
+							</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+							<div class="col-sm-10">
+							  <input type="text" class="form-control" id="inputEmail3" name="email" placeholder="输入您的邮箱">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputPassword3" class="col-sm-2 control-label">内容</label>
+							<div class="col-sm-10">
+								<textarea name="message" placeholder="回复的内容" class="form-control" rows="3"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12 text-right">									
+									<input type="reset" class="btn btn-default btn-lg" value="重  置" />&nbsp;&nbsp;
+									<input type="submit" class="btn btn-primary btn-lg" value="提  交" />
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+			</section>
+
+{{template "common/footer.html" .}}
